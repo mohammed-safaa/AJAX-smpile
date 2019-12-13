@@ -1,0 +1,51 @@
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
+<!-- Include JS File Here -->
+<link href="style.css" rel="stylesheet"/>
+<!-- Include JS File Here -->
+
+
+
+
+    <input type="submit" id="like" name="submit" class="btn btn-danger submitBtn" value="SAVE"/>
+
+
+
+
+
+<!-- <script src="jquery-3.4.1.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    
+    $("#like").on('click', function(){
+//
+alert('test');
+
+});
+
+    </script>
+ -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+$("#save").on('click', function(){
+
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: { like_s: like_s, news_id: news_id , _token: token },
+                success: function(data){
+                    // alert(data.is_like);
+                    
+                }
+            })
+        });
+
+    </script>
+
+</body>
+</html>
